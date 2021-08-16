@@ -120,7 +120,7 @@
 
 
 .mainHead{
-  background-image: url('/tech-planet.jpg');
+  background-image: url('./tech-planet.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   
@@ -290,7 +290,7 @@
 }
  
 .servOne{
-  background-image: url('/transbg.png');
+  background-image: url('./transbg.png');
   background-size: contain;
   background-repeat: no-repeat;
   text-align: center;
