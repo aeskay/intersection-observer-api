@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Rajdhani:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.navIcon span{
+  display: block;
+  width: 35px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: rgb(0, 0, 0);
+  border-radius: 3px;
+  user-select: none;
+  transition: transform 1s cubic-bezier(0.77,0.2,0.05,1.0), background-color 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+  z-index: 21;
+}
+
+.navIcon{
+  /* margin: 20px; */
+  position: relative;
+  display: block;
+  top: 0px;
+}
+
+.navIcon input{
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  opacity: 0;
+  z-index: 22;
+  cursor: pointer;
+}
+
+.navIcon ul{
+  height: 110vh;
+  /* transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);  */
+  position: fixed;
+  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #282362 100%);
+  width: 250px;
+  list-style: none;
+  padding: 100px 0px 0px 30px;
+  top: -20px;
+  left: -15px;
+  z-index: 20;
+  /* opacity: 0; */
+}
+
+
+@keyframes navigationTwo{
+  0%{
+      left: -15px;
+  }
+  100%{
+      left: -300px;    
+      visibility: hidden;   
+  }
+}
+
+.navIcon ul li{
+  font-size: 18px;
+  font-family: 'Rajdhani', sans-serif;
+  margin: 20px 0px;
+  color: white;
+  font-weight: lighter;
+}
+
+.navIcon ul li:hover{
+  color:#24aae2;
+  cursor: grab;
+}
+
+.navIcon input:checked ~ ul{
+  visibility: visible;
+  opacity: 1;
+  height: 110vh;
+  animation-name: navigation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  z-index: 20;
+}
+
+.navIcon input:not(:checked) ~ ul{
+  animation-name: navigationTwo;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes navigation{
+  0%{
+      left: -250px
+  }
+  100%{
+      left: -15px;
+  }
+}
+
+.navIcon input:checked ~ span:nth-child(3){
+  visibility: hidden;
+}
+
+.navIcon input:checked ~ span:nth-child(2){
+  display: block;
+  transform: scale(1.2) rotate(38deg);
+  transform-origin: 1px 2px;
+  color: black;
+}
+.navIcon input:checked ~ span:nth-child(4){
+  transform: scale(1.2) rotate(-38deg);
+  transform-origin: 9px;
+  color:black;
+}
+
+
+
+.mainHead{
+  background-image: url('/tech-planet.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+ }
+ 
+ .headDiv{
+   background:rgba(0, 0, 0, 0.7);
+   height: 90vh;
+   width: 100%;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ }
+ 
+ .headText{
+   color: white;
+   font-family: 'Rajdhani', sans-serif;
+   font-size: 40px;
+   font-weight: 600;
+ }
+ 
+ .subtitle{
+   color: rgb(209, 209, 209);
+   font-family: 'Rajdhani', sans-serif;
+   font-size: 18px;
+   margin: 28px 0;
+ }
+ 
+ nav{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 5px 10px;
+ }
+ 
+ .logo{
+   height: 50px;
+ }
+ 
+ .brand{
+   font-family: 'Gugi', cursive;
+   font-size: 32px;
+   color: #282362;
+   font-weight: 600;
+ }
+ 
+ .menu{
+   position: relative;
+   padding: 20px;
+ }
+ 
+ .quote-btn{
+  padding: 15px 40px;
+  /* border-radius: 95px 322px 111px 139px / 59px 82px 78px 103px; */
+  background-color: #1e3c72;
+  border:none;
+  color: white;
+  font-family: 'Rajdhani';
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 30px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.8);
+  outline: none;
+ }
+
+ .quote-btn:hover{
+  background-color: #4162a3;  
+  transition: background-color 500ms ease-in;
+  cursor: pointer;
+  
+ }
+
+
+ /* Animations Declarations */
+
+ .fade-in-top{
+   animation: fade-in-top 1.5s ease-out;
+  position: relative;
+ }
+ 
+ @keyframes fade-in-top {
+   0%{
+     top: -100px;
+     opacity: 0;
+   }
+   100%{
+     top: 0px;
+     opacity: 1;
+   }
+ }
+
+ .fade-in-bottom{
+  animation: fade-in-bottom 1.5s ease-in;
+ position: relative;
+}
+
+@keyframes fade-in-bottom {
+  0%{
+    top: 100px;
+    opacity: 0;
+  }
+  100%{
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+.fade-in{
+  animation: fade-in 2.5s ease-in;
+  position: relative;
+}
+
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.fade-in-left{
+  animation: fade-in-left 1.5s ease-in;
+  position: relative;
+}
+
+@keyframes fade-in-left {
+  0%{
+    left: -30vw;
+    opacity: 0;
+  }
+  100%{
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+.fade-in-right{
+  animation: fade-in-right 1.5s ease-in;
+ position: relative;
+}
+
+@keyframes fade-in-right {
+  0%{
+    right: -30vw;
+    opacity: 0;
+  }
+  100%{
+    right: 0px;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 900px) {
+  .servicesDiv{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 50px 0;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+.servicesDiv{
+  padding: 50px 0;
+  min-height: 100vh;
+}
+ 
+.servOne{
+  background-image: url('/transbg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.servTwo{
+  padding: 40px
+}
+
+.title {
+  padding: 7px 15px;
+  background-color: rgb(197, 198, 255);
+  border-radius: 10px;
+  font-family: 'Rajdhani';
+  margin: 20px 0px;
+  width: fit-content;
+}
+
+.servOne img{
+  width: 70vmin;
+  max-width: 500px;
+}
+
+.bodyText{
+  color: rgb(91, 118, 134);
+  font-family: 'Varela Round', sans-serif;
+  font-size: 19px;
+  text-align: justify;
+}
+
+.headDiv div{
+  padding: 0 20px;
+}
+
+.sectionTwo{
+  background: rgba(238, 238, 238, 0.534);
+  padding: 50px 0px;
+}
+
+.sectionTwoDiv{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.cards{
+  background: rgb(255, 255, 255);
+  border: 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  max-width: 300px;
+  margin: 20px 10px;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.cardHead{
+  color: black;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cardBody{
+  margin-top: 10px;
+  color: rgb(3, 3, 3);
+  font-family: 'Varela Round', sans-serif;
+  font-size: 16px;
+  /* text-align: justify; */
+}
+
+.cardIcon{
+  font-size: 50px;
+  margin: 20px 0;
+  color: #337ab7;
+}
+
+footer{
+  background:rgb(29, 29, 29);
+  padding: 20px 0;
+  text-align: center;
+  color: rgb(236, 236, 236);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 17px;
+}
