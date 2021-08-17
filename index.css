@@ -185,14 +185,32 @@
   margin-top: 30px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.8);
   outline: none;
+   border-radius: 30px;
  }
 
  .quote-btn:hover{
   background-color: #4162a3;  
   transition: background-color 500ms ease-in;
   cursor: pointer;
-  
+  animation: btn 200ms ease-in-out;
+  animation-fill-mode: backwards;
  }
+
+@keyframes btn {
+  0%{
+    box-shadow: none;
+  }
+  50%{
+    box-shadow: 5px 5px 15px 41px rgba(255, 255, 255, 0.5);
+  }
+  90% {
+    box-shadow: 5px 5px 15px -23px rgba(255, 255, 255, 0)
+  }
+  100%{
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.8);
+  }
+  
+}
 
 
  /* Animations Declarations */
