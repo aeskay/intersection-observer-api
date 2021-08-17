@@ -176,14 +176,13 @@
  .quote-btn{
   padding: 15px 40px;
   /* border-radius: 95px 322px 111px 139px / 59px 82px 78px 103px; */
-  background-color: #1e3c72;
+  /*background-color: #1e3c72; */
   color: white;
   font-family: 'Rajdhani';
   font-size: 20px;
   font-weight: 500;
   margin-top: 30px;
   outline: none;
-   border-radius: 30px;
   text-align: center;
   cursor: pointer;
  }
