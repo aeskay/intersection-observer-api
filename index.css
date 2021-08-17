@@ -123,7 +123,7 @@
   background-image: url('./tech-planet.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  
+  clip-path: polygon(0 0, 100% 1%, 100% 90%, 0 68%);
  }
  
  .headDiv{
